@@ -53,12 +53,23 @@ module Bootstrap
       end
 
       def columns
-        begin
-          excluded_column_names = %w[id created_at updated_at]
-          @model_name.constantize.columns.reject{|c| excluded_column_names.include?(c.name) }.collect{|c| ::Rails::Generators::GeneratedAttribute.new(c.name, c.type)}
-        rescue NoMethodError
-          @model_name.constantize.fields.collect{|c| c[1]}.reject{|c| excluded_column_names.include?(c.name) }.collect{|c| ::Rails::Generators::GeneratedAttribute.new(c.name, c.type.to_s)}
+        excluded_column_names = %w[id created_at updated_at]
+        if defined?(ActiveRecord)
+          rescue_block ActiveRecord::StatementInvalid do
+            @model_name.constantize.columns.reject{|c| excluded_column_names.include?(c.name) }.collect{|c| ::Rails::Generators::GeneratedAttribute.new(c.name, c.type)}
+          end
+        else
+          rescue_block do
+            @model_name.constantize.fields.collect{|c| c[1]}.reject{|c| excluded_column_names.include?(c.name) }.collect{|c| ::Rails::Generators::GeneratedAttribute.new(c.name, c.type.to_s)}
+          end
         end
+      end
+
+      def rescue_block(exception=Exception)
+        yield if block_given?
+      rescue exception => e
+        say e.message, :red
+        exit
       end
 
       def extract_modules(name)
