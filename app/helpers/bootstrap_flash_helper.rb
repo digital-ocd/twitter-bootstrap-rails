@@ -2,9 +2,8 @@ module BootstrapFlashHelper
   def bootstrap_flash
    flash_messages = []
    flash.each do |type, message|
-     # Skip Devise :timeout and :timedout flags
+     # Skip Devise :timeout flag
      next if type == :timeout
-     next if type == :timedout
      type = :success if type == :notice
      type = :error   if type == :alert
      text = content_tag(:div, 

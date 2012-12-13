@@ -6,14 +6,10 @@ twitter-bootstrap-rails project integrates Bootstrap CSS toolkit for Rails 3.1 A
 [![Build Status](https://secure.travis-ci.org/seyhunak/twitter-bootstrap-rails.png)](http://travis-ci.org/seyhunak/twitter-bootstrap-rails)
 [![Dependency Status](https://gemnasium.com/seyhunak/twitter-bootstrap-rails.png)](https://gemnasium.com/seyhunak/twitter-bootstrap-rails)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/seyhunak/twitter-bootstrap-rails)
-[![Still Maintained](https://a248.e.akamai.net/camo.github.com/9c977523be7fce95c026a1b7d9673903f82e59cd/687474703a2f2f7374696c6c6d61696e7461696e65642e636f6d2f7374696c6c6d61696e7461696e65642f7374696c6c6d61696e7461696e65642e706e67)](http://stillmaintained.com/seyhunak/twitter-bootstrap-rails)
-
 
 ## Screencasts
 #### Installing twitter-bootstrap-rails, generators, usage and more
-<img width="180" height="35" src="http://oi49.tinypic.com/s5wn05.jpg"></img>
-
-Screencasts provided by <a href="http://railscasts.com">Railscasts</a> (Ryan Bates)
+Screencasts provided by Railscasts (Ryan Bates)
 
 [Twitter Bootstrap Basics](http://railscasts.com/episodes/328-twitter-bootstrap-basics "Twitter Bootstrap Basics")
 in this episode you will learn how to include Twitter Bootstrap into Rails application with the twitter-bootstrap-rails gem.
@@ -23,27 +19,11 @@ in this episode continues on the Twitter Bootstrap project showing how to displa
 (Note: This episode is pro episode)
 
 
-## Example Application
-An example application is available at [toadkicker/teststrap](https://github.com/toadkicker/teststrap). You can view it running on heroku [here.](http://teststrap.herokuapp.com/) Contributions welcome.
-
-
 ## Installing Gem
-The gem includes the source LESS and JS files. You'll need to choose a javascript runtime.
-ExecJS supports these runtimes:
 
-* [therubyracer](https://github.com/cowboyd/therubyracer) - Google V8
-  embedded within Ruby
-* [therubyrhino](https://github.com/cowboyd/therubyrhino) - Mozilla
-  Rhino embedded within JRuby
-* [Node.js](http://nodejs.org/)
-* Apple JavaScriptCore - Included with Mac OS X
-* [Microsoft Windows Script Host](http://msdn.microsoft.com/en-us/library/9bbdkx3k.aspx) (JScript)
-
-Include the [Twitter Bootstrap Rails gem](http://rubygems.org/gems/twitter-bootstrap-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org):
+Include the [Twitter Bootstrap Rails gem](http://rubygems.org/gems/twitter-bootstrap-rails) in Gemfile to install it from [RubyGems.org](http://rubygems.org);
 
 ```ruby
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-turbo"
 ```
 
@@ -121,29 +101,6 @@ You have to require Bootstrap LESS (bootstrap_and_overrides.css.less) in your ap
 /* Your stylesheets goes here... */
 ```
 
-To use individual components from bootstrap, your bootstrap_and_overrides.less could look like this:
-
-```css
-@import "twitter/bootstrap/reset.less";
-@import "twitter/bootstrap/variables.less";
-@import "twitter/bootstrap/mixins.less";
-@import "twitter/bootstrap/scaffolding.less";
-@import "twitter/bootstrap/grid.less";
-@import "twitter/bootstrap/layouts.less";
-@import "twitter/bootstrap/type.less";
-@import "twitter/bootstrap/forms.less";
-@import "twitter/bootstrap/wells.less";
-@import "twitter/bootstrap/component-animations.less";
-@import "twitter/bootstrap/buttons.less";
-@import "twitter/bootstrap/close.less";
-@import "twitter/bootstrap/navs.less";
-@import "twitter/bootstrap/navbar.less";
-@import "twitter/bootstrap/labels-badges.less";
-@import "twitter/bootstrap/hero-unit.less";
-@import "twitter/bootstrap/utilities.less";
-@import "twitter/bootstrap/responsive";
-```
-
 If you'd like to alter Bootstrap's own variables, or define your LESS
 styles inheriting Bootstrap's mixins, you can do so inside bootstrap_and_overrides.css.less:
 
@@ -163,20 +120,6 @@ $(document).ready(function(){
   /* Your javascripts goes here... */
 });
 ```
-
-If you want to customize what is loaded, your application.js would look something like this
-
-```js
-#= require jquery
-#= require jquery_ujs
-#= require twitter/bootstrap/bootstrap-transition
-#= require twitter/bootstrap/bootstrap-alert
-#= require twitter/bootstrap/bootstrap-modal
-#= require twitter/bootstrap/bootstrap-button
-#= require twitter/bootstrap/bootstrap-collapse
-```
-
-...and so on for each bootstrap js component.
 
 ## Using Coffeescript (optionally)
 
@@ -248,8 +191,6 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
   <li>Released gem v.2.1.2 (minor fixes and updated to Twitter Bootstrap 2.1.0)</li>
   <li>Released gem v.2.1.3 (minor fixes and updated to Twitter Bootstrap 2.1.1)</li>
   <li>Released gem v.2.1.4 (minor fixes)</li>
-  <li>Released gem v.2.1.5 (minor fixes, install generator detects javascript template engine, updated to Twitter Bootstrap 2.2.1)</li>
-  <li>Released gem v.2.1.6 (minor fixes)</li>
 </ul>
 
 
@@ -274,46 +215,44 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 </ul>
 
 
-### Future
+## Future
 <ul>
   <li>Writing tests (not implemented yet)</li>
   <li>Markup Helpers (alert, tabs, pagination, breadcrumbs etc.)</li>
 </ul>
 
-## About Me
-Lead/ Senior Developer - Programmer @useful (Usefulideas) Istanbul / Turkey
 
-### Contact me
+## Credits
 Seyhun Akyürek - seyhunak [at] gmail com
 
-### Follow me 
-<a href="http://zerply.com/seyhunak">
-<img width="110" height="40" src="http://zerply.com/img/welcomesteps/zerply_logo.png" />
-</a>
+[Add Me On Twitter](http://twitter.com/seyhunak "Add Me On Twitter")
 
-(Twitter, Facebook, Linkedin, Google+, Github)
+[Add Me On Linkedin](http://tr.linkedin.com/in/seyhunak "Add Me On Linkedin")
 
-http://zerply.com/seyhunak
+[Add Me On Facebook](https://www.facebook.com/seyhunak "Add Me On Facebook")
 
-### Endorse me
+[Add Me On Google+](http://plus.ly/seyhunak "Add Me On Google+")
+
+[Visit My Blog](http://www.seyhunakyurek.com/ "Visit My Blog")
+
+## Endorse My Skills
 <a href="http://coderwall.com/seyhunak">
 <img src="http://api.coderwall.com/seyhunak/endorsecount.png" />
 </a>
 
-### Klout me
-<img src="https://addons.opera.com/media/extensions/55/14355/1.0.1-rev1/icons/icon_64x64.png"></img>
-
-Please +K my influence in Ruby on Rails on @klout
-
-http://klout.com/#/seyhunak
-
-
-### Want to donate?
+##  Want to Donate?
 <img src="https://www.paypalobjects.com/en_US/i/logo/PayPal_mark_50x34.gif"></img>
 
 [Want to donate for my efforts?. Show your love](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W8ZLWQBREFP4U
  "Donate")
 
+
+## Score me
+<img src="https://addons.opera.com/media/extensions/55/14355/1.0.1-rev1/icons/icon_64x64.png"></img>
+
+Please +K my influence in Ruby on Rails on @klout
+
+http://klout.com/#/seyhunak
 
 ## Thanks
 Twitter Bootstrap and all twitter-bootstrap-rails contributors
@@ -321,7 +260,7 @@ http://twitter.github.com/bootstrap
 
 
 ## License
-Copyright (c) 2012 Seyhun Akyürek
+Copyright (c) 2011 Seyhun Akyürek
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
